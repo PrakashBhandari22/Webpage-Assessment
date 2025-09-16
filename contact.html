@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Wanderlust Trails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      display: flex;
+    }
+
+    /* Sidebar Nav */
+    nav {
+      background: #004466;
+      min-width: 220px;
+      height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      background: #006699;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    /* Contact Form Styles */
+    .contact-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #004466;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 1.2rem;
+    }
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #777;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      transition: border 0.3s;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-color: #004466;
+    }
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 8px;
+      background: #004466;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #006699;
+    }
+  </style>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Your message was sent successfully!");
+      form.reset();
+    });
+  });
+  </script>
+</head>
+<body>
+
+  <!-- Sidebar Nav -->
+  <nav>
+    <div class="logo"><i class="fas fa-mountain-sun"></i> Wanderlust Trails</div>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="tips.html">Travel Tips</a>
+    <a href="about.html">About</a>
+    <a href="references.html">References</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Contact</h2>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input type="tel" placeholder="Your Phone (optional)">
+        </div>
+        <div class="input-group">
+          <i class="fas fa-message"></i>
+          <textarea placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
